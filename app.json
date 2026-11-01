@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "SmartWaste360 Partner",
+    "slug": "smartwaste360-partner",
+    "scheme": "smartwaste360-partner",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/smartwaste-icon.png",
+    "backgroundColor": "#F7F8F5",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "ng.smartwaste360.partner.demo"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#F7F8F5",
+        "foregroundImage": "./assets/smartwaste-icon.png"
+      },
+      "package": "ng.smartwaste360.partner.demo",
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/smartwaste-icon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-status-bar",
+      "expo-font"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+import Svg, { Path, Circle, Rect } from 'react-native-svg';
+export type IconName = 'home' | 'bins' | 'wallet' | 'activity' | 'you' | 'plus' | 'arrow' | 'help' | 'eye' | 'check';
+export function Icon({ name, color = '#215C43', size = 24 }: { name: IconName; color?: string; size?: number }) {
+ const paths: Partial<Record<IconName, string>> = { home:'M3 10.5 12 3l9 7.5M5 9v11h5v-6h4v6h5V9', bins:'M7 7h10l-1 14H8L7 7ZM5 7h14M9 4h6M10 11v6m4-6v6', wallet:'M20 7H5a2 2 0 0 1 0-4h13v4M4 7v13h16V7M20 11h-6v5h6', activity:'M6 3h12v18H6zM9 7h6m-6 5h6m-6 5h3', you:'M4 21v-2a8 8 0 0 1 16 0v2', plus:'M12 5v14M5 12h14', arrow:'M5 12h14m-6-6 6 6-6 6', help:'M4 14v-3a8 8 0 0 1 16 0v3M4 11H2v7h4v-7H4m16 0h2v7h-4v-7h2m-1 7c0 3-3 3-7 3', eye:'M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12', check:'m5 12 4 4L19 6' };
+ return <Svg width={size} height={size} viewBox="0 0 24 24"><Path d={paths[name]} fill="none" stroke={color} strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round"/>{name === 'you' ? <Circle cx={12} cy={7} r={4} fill="none" stroke={color} strokeWidth={1.8}/> : name === 'eye' ? <Circle cx={12} cy={12} r={2.5} fill="none" stroke={color} strokeWidth={1.8}/> : name === 'wallet' ? <Rect x={16} y={13} width={1.5} height={1.5} rx={0.75} fill={color}/> : null}</Svg>;
+}
