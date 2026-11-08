@@ -15,6 +15,7 @@ import {
   ChevronDown,
   ChevronUp,
 } from "lucide-react";
+import { ScreenSecurityShield } from "./ScreenSecurityShield";
 
 export const NDA_REFERENCE = "NDA-2026-8234";
 export const NDA_STORAGE_KEY = "sparkr_nda_accepted_v1";
@@ -192,7 +193,7 @@ prima facie evidence of acceptance.
   // If user has already signed the NDA, render the app + an unobtrusive floating verification badge
   if (record) {
     return (
-      <>
+      <ScreenSecurityShield record={record}>
         {children}
 
         {/* Floating Agreement Badge in lower corner */}
@@ -276,7 +277,7 @@ prima facie evidence of acceptance.
             </div>
           </div>
         )}
-      </>
+      </ScreenSecurityShield>
     );
   }
 
