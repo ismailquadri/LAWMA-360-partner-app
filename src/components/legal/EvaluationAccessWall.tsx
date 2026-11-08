@@ -147,7 +147,6 @@ Company:       Sparkr Digitals (Lagos, Nigeria)
 Signatory:     Quadri Ismail, Chief Executive Manager
 Contact:       hello@sparkrdigitals.com | +234 912 766 6376
 Issue Date:    8 November 2026
-Valid Until:   22 November 2026
 
 SUMMARY OF BINDING TERMS:
 1. INTELLECTUAL PROPERTY RIGHTS: All rights, title and interest, including all 
@@ -292,7 +291,7 @@ prima facie evidence of acceptance.
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-sm font-bold tracking-tight text-zinc-950 uppercase">
-                  ¥ Sparkr Digitals
+                  Sparkr Digitals
                 </span>
                 <span className="text-xs text-zinc-600 font-medium">· Lagos, Nigeria</span>
               </div>
@@ -316,9 +315,6 @@ prima facie evidence of acceptance.
             <h1 id="nda-title" className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900">
               Platform Access & Evaluation Terms
             </h1>
-            <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-amber-700">
-              Lawyer Review Draft — Not Final Legal Advice · Valid Until 22 November 2026
-            </p>
           </div>
         </div>
 
@@ -482,7 +478,7 @@ prima facie evidence of acceptance.
               </section>
 
               <div className="pt-2 border-t border-zinc-200 text-[11px] text-zinc-500 font-medium">
-                Executed under signature authority: <strong>Quadri Ismail</strong>, Chief Executive Manager, Sparkr Digitals (8 November 2026).
+                Executed under signature authority: <strong>Quadri Ismail</strong>, Chief Executive Manager, Sparkr Digitals.
               </div>
             </div>
           </div>
@@ -523,7 +519,7 @@ prima facie evidence of acceptance.
               className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl border border-zinc-300 bg-white px-4 py-2.5 text-xs font-semibold text-zinc-700 hover:bg-zinc-50 shadow-sm transition-colors"
             >
               <Download className="size-3.5" />
-              Download Draft Terms (.txt)
+              Download Terms (.txt)
             </button>
 
             <button
