@@ -18,7 +18,7 @@ import { recordSignIn } from "../lib/signins";
 import { useEffect as useMountEffect, useState } from "react";
 import { Shell } from "../components/partner/Shell";
 import { Toaster } from "../components/ui/sonner";
-import { EvaluationAccessWall } from "../components/legal/EvaluationAccessWall";
+// import { EvaluationAccessWall } from "../components/legal/EvaluationAccessWall";
 
 function NotFoundComponent() {
   return (
@@ -123,11 +123,15 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      {/* Security layer commented out for now:
       <EvaluationAccessWall>
+      */}
         {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
         <AccountGate />
         <Toaster position="bottom-right" />
+      {/*
       </EvaluationAccessWall>
+      */}
     </QueryClientProvider>
   );
 }
