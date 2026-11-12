@@ -15,3 +15,14 @@ Operational data, demo accounts, sign-in history, and attachments are stored in 
 AI security review runs on the server against OpenAI directly. Configure `OPENAI_API_KEY` and `OPENAI_MODEL` in Vercel to enable it. Neither is configured in this release. The existing input-limited endpoint is public and requires real authentication/rate limiting before exposing a paid provider to untrusted users.
 
 Images are bundled in `public/assets`; there is no external asset-host dependency.
+
+## Engineering & Product Documentation
+
+Complete technical specifications, field research, street political economy, and stakeholder defense playbooks are available in [`docs/`](docs/):
+
+- **[Product Requirements Document (PRD)](docs/PRD.md)**: Ward franchise management, two-tier fleet tracking (compactors + tricycles), compound split-billing ledger, bankable financial statements, and automated 80/20 Friday 5 PM escrow settlement.
+- **[UX & Field Research](docs/research.md)**: 400+ PSP SME unit economics, diesel price volatility, route pirating, and equipment financing hurdles.
+- **[Stakeholder Critiques & Concerns](docs/stakeholder-critiques-and-concerns.md)**: 35+ questions across 10 key Lagos stakeholders.
+- **[Stakeholder Defense Master Playbook](docs/stakeholder-defense-answers.md)**: Executive defense scripts answering all critiques.
+- **[Political Economy of the Streets](docs/political-economy-of-the-streets.md)**: Agbero tolls, illegal dump competition, diesel FVA adjustments, and AWAMN institutional relations.
+- **[Cross-System Ecosystem Specs](docs/ecosystem-specs/)**: PRDs and data contracts for Workspace, Resident, and Operator apps.
