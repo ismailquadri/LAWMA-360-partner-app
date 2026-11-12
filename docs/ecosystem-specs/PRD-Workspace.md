@@ -19,6 +19,119 @@
 
 ---
 
+
+---
+
+## 1.1 The Statutory 6-Stage Solid Waste Lifecycle & Mass-Balance Clearinghouse
+
+Under the **2017 EMPL** and the **Polluter-Pay Policy**, Lagos manages **12,000–15,000 MT/day** of municipal solid waste (MSW). Workspace operates as the central regulatory clearinghouse ensuring that no waste disappears between generation and final engineered disposal.
+
+```mermaid
+flowchart TD
+    %% STAGE 1
+    subgraph S1 ["Stage 1: Waste Generation (12,000 - 15,000 MT/day)"]
+        G1["Residential Compounds (Multi-Tenants)"]
+        G2["Open Commercial Markets (Ikotun, Ile-Epo)"]
+        G3["Public Spaces & Highways (Sweeping/Drains PUB-SPC-*)"]
+        G4["Specialized / Healthcare / Industrial (Toxic SPL-*)"]
+    end
+
+    %% STAGE 2
+    subgraph S2 ["Stage 2: Waste Handling at Source"]
+        H1["Source Segregation & Bagging<br/>(Blue: Recyclables | Black: Organic/General)"]
+        H2["Compound RFID / QR Tag Provisioning<br/>(TAG-HH-*, Multi-Tenant Split-Bill)"]
+        H3["Storage in Dino Bins / Skips / Standard Toter Bins"]
+    end
+
+    %% STAGE 3
+    subgraph S3 ["Stage 3: Collection & Transport (Split Operational Model)"]
+        direction TB
+        subgraph PSP_SPLIT ["Accredited PSP SME Fleet (Neighborhoods)"]
+            T1["Compactor Trucks (Primary Streets)"]
+            T2["Tricycles / Mini-Tippers (Inner Inaccessible Lanes)"]
+        end
+        subgraph LAWMA_SPLIT ["LAWMA Direct Fleets & Special Directorates"]
+            T3["Highway Sweeper & Drain Silt Trucks (PUB-SPC-*)"]
+            T4["Specialized / Biohazard Haulers (SPL-*)"]
+        end
+        TLS["Transfer Loading Stations (FAC-AGE Agege TLS)<br/>10-Module Weighbridge Intake & Bulk Compaction"]
+    end
+
+    %% STAGE 4 (Diversion)
+    subgraph S4 ["Stage 4: Treatment & Diversion Corridors"]
+        MRF["4A: Material Recovery / Recycling<br/>MRF Hubs & Scrap Buyback (Baba Oja)"]
+        BIO["4B: Biological Treatment<br/>Compost & Black Soldier Fly Hub (FAC-ORG-ALI)"]
+        WTE["4C: Energy Recovery<br/>Biogas & Refuse-Derived Fuel / RDF (FAC-WTE-LAG)"]
+    end
+
+    %% STAGE 5 (Residue Loop)
+    subgraph S5 ["Stage 5: Process Residues & Secondary Reject Loop"]
+        RES["Non-Recyclable Rejects, Compost Overs & WTE Ash (MAT-RES-*)<br/>Strict Secondary Outbound Manifests"]
+    end
+
+    %% STAGE 6
+    subgraph S6 ["Stage 6: Final Landfilling"]
+        LF["State-Designated Landfills<br/>Solous II (DS-SOL, 100/day Limit) | Olusosun (DS-OLU) | Epe (DS-EPE)<br/>Weighbridge Reconciliation & Daily Laterite Capping (MAT-CAP-*)"]
+    end
+
+    %% CONNECTIONS
+    S1 --> S2
+    S2 --> S3
+    
+    T1 & T2 -->|Local Neighborhood Pickup| TLS
+    T1 & T2 -->|Direct Hauled Tip-off| LF
+    T3 & T4 -->|Direct Specialized Manifest| LF
+    TLS -->|Bulk Prime Mover Manifest| LF
+    
+    %% Diversion Branches
+    TLS & S3 -->|Source-Separated Dry Recyclables| MRF
+    TLS & S3 -->|Market Organic / Food Waste| BIO
+    TLS & S3 -->|High-Calorific / Shredded Fractions| WTE
+    
+    %% Direct Commingled to Landfill
+    TLS & S3 -->|Commingled Unsegregated MSW| LF
+    
+    %% Residue Feedback Loop to Landfill
+    MRF -->|Sorting Rejects 15-25%| RES
+    BIO -->|Non-Compostable Overs 10-20%| RES
+    WTE -->|Bottom Ash / Inorganics 15-20%| RES
+    RES -->|Final Tipping & Engineered Containment| LF
+```
+
+### The Closed Mass-Balance Equation
+$$\sum 	ext{Mass}_{	ext{Generated}} = 	ext{Mass}_{	ext{Direct Landfill}} + 	ext{Mass}_{	ext{Recycled}} + 	ext{Mass}_{	ext{Biological}} + 	ext{Mass}_{	ext{Energy}} + 	ext{Mass}_{	ext{In-Transit}}$$
+Where:
+$$	ext{Mass}_{	ext{Landfill Total}} = 	ext{Mass}_{	ext{Direct Landfill}} + \sum 	ext{Mass}_{	ext{Residues (MAT-RES-*) Bonds}}$$
+
+---
+
+## 1.2 Multi-Year Transformation Phasing & Engineering Rollout
+
+From the **LAWMA Digital Platform Transformation (2026–2029)** master roadmap:
+
+| Phase | Timeline | Engineering & Infrastructure Deliverables | Capital & Operational Targets |
+| :--- | :--- | :--- | :--- |
+| **Phase 0: Reconnaissance** | Months -2 to 0 | Technical baseline audit, site surveys of Agege TLS & Solous II, AWS/Azure active-passive sandbox setup, and security compliance verification. | Baseline verification; sandbox integrations. |
+| **Phase 1: Foundation & Pilot** | Months 0 to 12 | Core identity registry (LASRRA integration), compound split-billing engine, 100 compactor GPS/OBD-II telematics pilot, Alimosho pilot corridor deployment, and 80/20 escrow clearinghouse. | 100 vehicles telematics ($25,000 / ₦33.75M), fintech webhooks ($15,000), LASRRA setup ($10,000). |
+| **Phase 2: Scale, TLS & Enforcement** | Months 12 to 24 | Statewide expansion to all 57 LGAs/LCDAs, 400 compactor telematics units, 1,500 rugged Android handhelds for tricycle micro-collectors, 5 TLS automated weighbridge scale indicators ($5,000/site), WhatsApp Cloud API ($15,000) & USSD gateway ($20,000) live. | 400 compactors ($100,000), 1,500 handhelds ($270,000), 5 TLS scales ($25,000). |
+| **Phase 3: Smart City & Ecosystem** | Months 24 to 36 | Predictive AI routing, Pakam/Scrapays API synchronization, source-sorting gamification, and Epe / Harvest Waste WTE corridor telemetry. | AI inference, GIS spatial analytics, multi-region sync. |
+
+---
+
+## 1.3 Hardware & Edge Telematics Specifications
+
+1. **Heavy Compactor OBD-II / GPS Units ($250/unit):**
+   - Quad-band 4G LTE with 2G fallback (EGPRS 900/1800).
+   - Real-time CAN bus telemetry: fuel level, engine RPM, ignition state, hydraulic PTO (Power Take-Off) engagement sensor (detects compactor blade cycling vs idle driving).
+   - High-gain external GPS/GLONASS antenna with 10Hz sampling.
+2. **Tricycle & Field Crew Rugged Handhelds ($180/unit):**
+   - Ruggedized Android 14 mobile computers, IP67 dust/water resistant, 1.5m drop-to-concrete spec.
+   - Dedicated 1D/2D zebra-grade hardware barcode imager (<100ms scan decode in direct tropical sunlight).
+   - Removable 5000mAh hot-swappable battery with 14-hour continuous operating shift rating.
+3. **Automated TLS Weighbridge Scale Indicators ($5,000/site):**
+   - Digital load-cell indicators with optical barrier axle-sensors and automated license plate recognition (ALPR).
+   - Isolated RS-232/RS-485 serial-to-IP edge bridges pushing gross/tare weight directly into `tls-entry.js` state machine.
+
 ## 2. Personas & Role-Based Access (`personaPages` / RBAC)
 
 Preserves all existing `journeyRoles` in `modules.js` and `tls-lifecycle.js`, adding explicit production RBAC boundaries:
