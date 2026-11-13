@@ -12,11 +12,10 @@ This folder contains the complete, tailored engineering specifications for the *
 2. **[PSP SME Unit Economics Research (research.md)](research.md)**  
    *Field findings on diesel cost volatility (₦1,300/L), aging fleet maintenance hurdles, collection leakage, and commercial banking constraints.*
 
-3. **[PSP Operator & AWAMN Critiques (stakeholder-critiques-and-concerns.md)](stakeholder-critiques-and-concerns.md)**  
+3. **[Stakeholder Critiques & Defense Playbook (stakeholder-critiques-and-defense.md)](stakeholder-critiques-and-defense.md)**
+   *Unified Q&A dossier directly pairing every critical stakeholder objection with its engineering mitigation and statutory defense.*
    *Critical business challenges: Visionscape trauma, government escrow withholding fears, inflation vs capped tariffs, route pirating, and commercial bank lending barriers.*
 
-4. **[PSP Master Defense Playbook (stakeholder-defense-answers.md)](stakeholder-defense-answers.md)**  
-   *Institutional & financial mitigations: statutory ward exclusivity under 2017 EMPL, automated unblockable NIP bank escrow settlement, dynamic Fuel Variance Adjustments (FVA), and BOI-compliant balance sheets.*
 
 5. **[Street Political Economy (political-economy-of-the-streets.md)](political-economy-of-the-streets.md)**  
    *SME business realities: AWAMN union politics, depot diesel procurement, and Local Government revenue clashes.*
